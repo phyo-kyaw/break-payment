@@ -30,7 +30,7 @@ metadata:
     app: booking-payment-api
 spec:
   ports:
-    - port: 8084
+    - port: 80
       targetPort: 8080
   selector:
     app: booking-payment-api
