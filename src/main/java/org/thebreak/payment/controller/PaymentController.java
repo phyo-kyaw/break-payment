@@ -18,7 +18,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin
 @Slf4j
-@RequestMapping(value = "api/v1/payment")
+@RequestMapping(value = "api/paymentBooking")
 public class PaymentController {
     // test payment
     @Autowired
