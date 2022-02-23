@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+braintree:
+  ENVIRONMENT: sandbox
+  MERCHANT_ID: 2vf4nrj7xfcx6d4p
+  PUBLIC_KEY: htjmwjsw2jtw5sg9
+  PRIVATE_KEY: fd95a31e51e2c39dc95ee5f5aebde991
+
+spring:
+  #profiles:
+    #active: dev
+  application:
+    name: booking-payment
+
+

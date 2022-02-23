@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booking-payment-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-payment-api
+  template:
+    metadata:
+      labels:
+        app: booking-payment-api
+    spec:
+      containers:
+        - name: booking-payment-api
+          image: pkdocker3383/booking-payment-api:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          #env:
+            #- name: PORT
+              #value: "8080"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: booking-payment-api
+  labels:
+    app: booking-payment-api
+spec:
+  ports:
+    - port: 8084
+      targetPort: 8080
+  selector:
+    app: booking-payment-api
